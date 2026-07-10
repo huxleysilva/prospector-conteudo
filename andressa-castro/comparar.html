@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Andressa Castro Arquitetura — Antes e Depois</title>
+<meta name="robots" content="noindex, nofollow">
+<style>
+  :root{
+    --stone-50:#F3EEE4;
+    --stone-100:#E7DFCC;
+    --ink:#23201B;
+    --olive:#6E7351;
+    --terracotta:#A9714A;
+    --line:#B7A88C;
+    --display:"Fraunces", Georgia, "Iowan Old Style", serif;
+    --body:"Inter Tight", -apple-system, "Segoe UI", Roboto, sans-serif;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0; background:var(--stone-50); color:var(--ink);
+    font-family:var(--body);
+  }
+  header{
+    padding:2.2rem clamp(1.25rem,5vw,4rem) 1.6rem;
+    border-bottom:1px solid var(--line);
+  }
+  header .eyebrow{
+    font-size:0.72rem; letter-spacing:0.22em; text-transform:uppercase;
+    color:var(--olive); font-weight:600;
+  }
+  header h1{
+    font-family:var(--display); font-weight:500; font-size:clamp(1.6rem,3.5vw,2.4rem);
+    margin:0.5rem 0 0.6rem;
+  }
+  header p{max-width:60em; color:#4a443b; font-size:0.95rem; line-height:1.55;}
+  header .note{
+    margin-top:0.9rem; font-size:0.8rem; color:var(--terracotta); font-style:italic;
+    font-family:var(--display);
+  }
+
+  .compare{
+    display:grid; grid-template-columns:1fr; gap:1px;
+    background:var(--line);
+  }
+  @media (min-width:900px){
+    .compare{grid-template-columns:1fr 1fr;}
+  }
+  .pane{background:var(--stone-50); display:flex; flex-direction:column;}
+  .pane-head{
+    padding:0.9rem clamp(1rem,3vw,2rem);
+    display:flex; align-items:center; justify-content:space-between; gap:1rem;
+    border-bottom:1px solid var(--line);
+  }
+  .pane-head .tag{
+    font-size:0.68rem; letter-spacing:0.14em; text-transform:uppercase; font-weight:700;
+  }
+  .pane.old .tag{color:#8a5a3f;}
+  .pane.new .tag{color:var(--olive);}
+  .pane-head a{
+    font-size:0.75rem; color:var(--ink); text-decoration:none; border-bottom:1px solid var(--line);
+  }
+  .pane-head a:hover{color:var(--terracotta); border-color:var(--terracotta);}
+  iframe{
+    width:100%; height:78vh; border:0; display:block; background:#fff;
+  }
+  .pane-foot{
+    padding:0.7rem clamp(1rem,3vw,2rem);
+    font-size:0.78rem; color:#4a443b;
+    border-top:1px solid var(--line);
+  }
+
+  footer{
+    padding:2rem clamp(1.25rem,5vw,4rem) 3rem;
+    font-size:0.78rem; color:#4a443b;
+    max-width:70em;
+  }
+  footer a{color:var(--olive);}
+
+  :focus-visible{outline:2px solid var(--terracotta); outline-offset:2px;}
+</style>
+</head>
+<body>
+
+<header>
+  <p class="eyebrow">Proposta de redesign</p>
+  <h1>Andressa Castro Arquitetura e Interiores — antes e depois</h1>
+  <p>À esquerda, o site antigo (domínio original <strong>andressacastroarq.com.br</strong> está fora do ar — este é o snapshot salvo pelo Wayback Machine em 30/03/2025). À direita, a proposta de redesign, com a mesma identidade, texto e contato reais, em uma estrutura nova.</p>
+  <p class="note">O site antigo pode carregar lentamente ou incompleto — é um arquivo histórico do Internet Archive, não o site ao vivo.</p>
+</header>
+
+<div class="compare">
+  <div class="pane old">
+    <div class="pane-head">
+      <span class="tag">Antes · site original (offline)</span>
+      <a href="http://web.archive.org/web/20250330215711/https://andressacastroarq.com.br/" target="_blank" rel="noopener">abrir snapshot ↗</a>
+    </div>
+    <iframe src="http://web.archive.org/web/20250330215711/https://andressacastroarq.com.br/" title="Site antigo de Andressa Castro Arquitetura (snapshot Wayback Machine, 30/03/2025)" loading="lazy"></iframe>
+    <div class="pane-foot">Domínio original offline desde a prospecção. Fonte: Wayback Machine, captura de 30 mar. 2025.</div>
+  </div>
+
+  <div class="pane new">
+    <div class="pane-head">
+      <span class="tag">Depois · proposta de redesign</span>
+      <a href="index.html" target="_blank" rel="noopener">abrir em nova aba ↗</a>
+    </div>
+    <iframe src="index.html" title="Novo site de Andressa Castro Arquitetura" loading="lazy"></iframe>
+    <div class="pane-foot">Um arquivo só, HTML/CSS puro, responsivo e pronto para publicar.</div>
+  </div>
+</div>
+
+<footer>
+  <p>Ver detalhes do que foi mantido e do que mudou em <a href="NOTAS.md">NOTAS.md</a>.</p>
+</footer>
+
+</body>
+</html>

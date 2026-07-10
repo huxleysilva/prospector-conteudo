@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Brasil Cerrado Arquitetura — Antes e Depois</title>
+<meta name="robots" content="noindex, nofollow">
+<style>
+  :root{
+    --ink:#262019; --olive:#4B5A3D; --olive-deep:#333F29;
+    --sand:#F3ECDE; --sand-deep:#E7DCC3; --terracotta:#B1592B;
+    --display:'Instrument Serif', Georgia, serif;
+    --body:'Geist', -apple-system, 'Segoe UI', Roboto, sans-serif;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0; background:var(--sand); color:var(--ink); font-family:var(--body);}
+  header{padding:2.2rem clamp(1.25rem,5vw,4rem) 1.6rem; border-bottom:1px solid var(--sand-deep);}
+  header .eyebrow{font-size:0.72rem; letter-spacing:0.24em; text-transform:uppercase; color:var(--terracotta); font-weight:700;}
+  header h1{font-family:var(--display); font-weight:400; font-size:clamp(1.7rem,3.6vw,2.5rem); margin:0.5rem 0 0.7rem;}
+  header p{max-width:64em; color:#4a4335; font-size:0.96rem; line-height:1.6; margin:0.4rem 0;}
+  header .note{color:var(--olive-deep); font-style:italic; font-family:var(--display); font-size:0.95rem;}
+
+  .compare{display:grid; grid-template-columns:1fr; gap:1px; background:var(--sand-deep);}
+  @media (min-width:920px){.compare{grid-template-columns:1fr 1fr;}}
+  .pane{background:var(--sand); display:flex; flex-direction:column;}
+  .pane-head{
+    padding:0.9rem clamp(1rem,3vw,2rem); display:flex; align-items:center; justify-content:space-between;
+    gap:1rem; border-bottom:1px solid var(--sand-deep);
+  }
+  .pane-head .tag{font-size:0.68rem; letter-spacing:0.16em; text-transform:uppercase; font-weight:700;}
+  .pane.old .tag{color:#8a5a3f;}
+  .pane.new .tag{color:var(--olive);}
+  .pane-head a{font-size:0.76rem; color:var(--ink); text-decoration:none; border-bottom:1px solid var(--sand-deep);}
+  .pane-head a:hover{color:var(--terracotta); border-color:var(--terracotta);}
+  iframe{width:100%; height:80vh; border:0; display:block; background:#fff;}
+  .pane-foot{padding:0.75rem clamp(1rem,3vw,2rem); font-size:0.8rem; color:#4a4335; border-top:1px solid var(--sand-deep);}
+
+  .why{padding:clamp(2rem,5vw,3rem) clamp(1.25rem,5vw,4rem); max-width:60rem;}
+  .why h2{font-family:var(--display); font-weight:400; font-size:clamp(1.4rem,2.6vw,1.9rem); margin:0 0 1rem;}
+  .why ul{padding-left:1.2rem; line-height:1.7; color:#3a3428;}
+  .why li{margin-bottom:0.5rem;}
+
+  footer{padding:1.5rem clamp(1.25rem,5vw,4rem) 3rem; font-size:0.8rem; color:#4a4335;}
+  footer a{color:var(--olive-deep); font-weight:600;}
+  :focus-visible{outline:3px solid var(--terracotta); outline-offset:2px;}
+</style>
+</head>
+<body>
+
+<header>
+  <p class="eyebrow">Proposta de redesign</p>
+  <h1>Brasil Cerrado Arquitetura — antes e depois</h1>
+  <p>À esquerda, o site atual: uma página institucional do Google Sites com pouco mais do que a logo e um botão único, <strong>"Fale conosco aqui"</strong>, que redireciona para um Linktree externo — de onde saem os contatos reais de WhatsApp. À direita, a proposta de redesign: um site institucional completo, com os dois canais de WhatsApp (projetos e obras), endereço, portfólio e avaliações reais já embutidos, sem depender de um link intermediário.</p>
+  <p class="note">O painel da esquerda é o site ao vivo — o Google Sites pode recusar ser exibido dentro de um iframe (proteção do próprio Google). Se aparecer em branco, use o link "abrir em nova aba".</p>
+</header>
+
+<div class="compare">
+  <div class="pane old">
+    <div class="pane-head">
+      <span class="tag">Antes · site atual (Google Sites)</span>
+      <a href="https://sites.google.com/view/brasilcerradoarquitetura/in%C3%ADcio" target="_blank" rel="noopener">abrir em nova aba ↗</a>
+    </div>
+    <iframe src="https://sites.google.com/view/brasilcerradoarquitetura/in%C3%ADcio" title="Site atual de Brasil Cerrado Arquitetura (Google Sites)" loading="lazy"></iframe>
+    <div class="pane-foot">Página institucional vazia: logo + 1 botão que leva a um Linktree externo (linktr.ee/brasilcerradoarquitetura).</div>
+  </div>
+
+  <div class="pane new">
+    <div class="pane-head">
+      <span class="tag">Depois · proposta de redesign</span>
+      <a href="index.html" target="_blank" rel="noopener">abrir em nova aba ↗</a>
+    </div>
+    <iframe src="index.html" title="Novo site de Brasil Cerrado Arquitetura" loading="lazy"></iframe>
+    <div class="pane-foot">Um arquivo só, HTML/CSS puro, responsivo, com WhatsApp nativo — sem Linktree no meio do caminho.</div>
+  </div>
+</div>
+
+<div class="why">
+  <h2>O que resolve na prática</h2>
+  <ul>
+    <li><strong>Elimina o intermediário.</strong> Hoje quem visita o site precisa clicar em "Fale conosco aqui", esperar o redirecionamento do Google, cair no Linktree e escolher entre dois links de WhatsApp sem contexto nenhum. No novo site, os dois WhatsApp (projetos e obras) já aparecem com rótulo, direto na página.</li>
+    <li><strong>Mostra prova social que já existe e não estava em lugar nenhum do site.</strong> A nota 5,0 com 12 avaliações e três depoimentos reais do Google Maps não apareciam em nenhum canal próprio do escritório — só quem já procurava no Maps via.</li>
+    <li><strong>Organiza os dois arquitetos e os dois serviços (projeto/obra)</strong>, que já existiam nos materiais do escritório mas estavam soltos dentro de uma imagem de proposta comercial, não em texto navegável, indexável e acessível.</li>
+    <li><strong>Sem fotos inventadas.</strong> O escritório ainda não tem fotos de projetos executados publicamente disponíveis — em vez de usar banco de imagens genérico fingindo ser obra deles, o novo site usa tratamento tipográfico e cromático forte na paleta que já é da marca (oliva, terracota, areia). Detalhes em <a href="NOTAS.md">NOTAS.md</a>.</li>
+  </ul>
+</div>
+
+<footer>
+  <p>Ver o que foi mantido e o que mudou, com justificativa item a item, em <a href="NOTAS.md">NOTAS.md</a>.</p>
+</footer>
+
+</body>
+</html>

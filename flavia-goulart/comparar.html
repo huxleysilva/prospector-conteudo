@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Flávia Goulart — Antes e depois do redesign</title>
+<style>
+  :root{
+    --bg: #F5EFE6;
+    --ink: #2B2824;
+    --dark: #1C1A17;
+    --accent: #B08968;
+    --line: #C9A227;
+    --font-display: 'Fraunces', Georgia, serif;
+    --font-body: -apple-system, 'Segoe UI', Roboto, sans-serif;
+  }
+  *{ box-sizing: border-box; }
+  body{ margin:0; background: var(--dark); color:#F5EFE6; font-family: var(--font-body); }
+  header{
+    padding: 28px clamp(20px,5vw,48px) 20px;
+    border-bottom: 1px solid rgba(245,239,230,.14);
+  }
+  header .hairline{ width:64px; height:2px; background: var(--line); border:0; margin-bottom:16px; }
+  header h1{ font-family: var(--font-display); font-style: italic; font-weight:500; font-size: clamp(1.5rem,3vw,2.1rem); margin:0 0 10px; }
+  header p{ max-width: 74ch; color:#D8CDB8; margin:0 0 6px; font-size:.98rem; line-height:1.6; }
+  header .aviso{
+    margin-top:14px; padding: 12px 16px; background: rgba(176,137,104,.14);
+    border-left: 3px solid var(--accent); font-size:.88rem; color:#E7DFD1; max-width: 74ch;
+  }
+  .compare{
+    display:grid; grid-template-columns: 1fr 1fr; gap:1px; background: rgba(245,239,230,.14);
+  }
+  .pane{ background: var(--dark); display:flex; flex-direction:column; min-height: 82vh; }
+  .pane .label{
+    display:flex; align-items:center; justify-content:space-between;
+    padding: 14px clamp(16px,3vw,28px);
+    font-size:.82rem; text-transform:uppercase; letter-spacing:.1em; color:#C9BFA9;
+    border-bottom: 1px solid rgba(245,239,230,.1);
+  }
+  .pane .label strong{ color:#fff; font-weight:600; letter-spacing:.02em; }
+  .pane .tag{
+    font-size:.72rem; padding:3px 8px; border:1px solid currentColor; border-radius:2px;
+  }
+  .tag.velho{ color:#C97B6B; }
+  .tag.novo{ color: var(--accent); }
+  iframe{ width:100%; flex:1; border:0; background:#fff; }
+  .fallback{
+    padding: 18px clamp(16px,3vw,28px); font-size:.85rem; color:#C9BFA9;
+  }
+  .fallback a{ color: var(--accent); }
+  @media (max-width: 860px){
+    .compare{ grid-template-columns: 1fr; }
+    .pane{ min-height: 70vh; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="hairline"></div>
+  <h1>Flávia Goulart — proposta de redesign</h1>
+  <p>Comparação lado a lado entre o site antigo e a proposta nova, mantendo logo, fotos reais, nomes da equipe e os depoimentos originais dos clientes de Brasília.</p>
+  <div class="aviso">
+    <strong>Nota:</strong> o domínio <code>flaviagoulart.com.br</code> está atualmente fora do ar (falha de DNS). O lado "antigo" abaixo carrega o snapshot do Wayback Machine de 20/04/2025 — a última versão navegável do site original — em vez do domínio ao vivo.
+  </div>
+</header>
+
+<div class="compare">
+  <section class="pane">
+    <div class="label"><strong>Antes</strong><span class="tag velho">site original — via Wayback Machine</span></div>
+    <iframe
+      src="http://web.archive.org/web/20250420061321/https://www.flaviagoulart.com.br/"
+      title="Site antigo de Flávia Goulart (snapshot Wayback Machine, 20/04/2025)"
+      loading="lazy" referrerpolicy="no-referrer"></iframe>
+    <p class="fallback">Se o quadro acima não carregar, veja o snapshot direto: <a href="http://web.archive.org/web/20250420061321/https://www.flaviagoulart.com.br/" target="_blank" rel="noopener">web.archive.org — 20/04/2025</a>. O domínio ao vivo <a href="https://www.flaviagoulart.com.br/" target="_blank" rel="noopener">flaviagoulart.com.br</a> não resolve mais.</p>
+  </section>
+  <section class="pane">
+    <div class="label"><strong>Depois</strong><span class="tag novo">proposta nova</span></div>
+    <iframe src="index.html" title="Proposta nova do site de Flávia Goulart" loading="lazy"></iframe>
+    <p class="fallback">Abrir a proposta em tela cheia: <a href="index.html" target="_blank" rel="noopener">index.html</a></p>
+  </section>
+</div>
+
+</body>
+</html>
