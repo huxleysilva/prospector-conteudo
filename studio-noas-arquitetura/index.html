@@ -442,4 +442,11 @@
       });
     }, {threshold:0.12});
     els.forEach(function(el){ io.observe(el); });
-    setTimeout(function()
+    setTimeout(function(){ els.forEach(function(el){ el.classList.add('in'); }); }, 2500);
+  } else {
+    document.querySelectorAll('[data-reveal]').forEach(function(el){ el.classList.add('in'); });
+  }
+</script>
+
+</body>
+</html>
