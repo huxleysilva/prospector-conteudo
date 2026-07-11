@@ -70,6 +70,11 @@
 
   /* hero */
   .hero{position:relative;}
+  .hero::before{
+    content:'';position:absolute;top:0;left:0;right:0;height:180px;z-index:15;
+    background:linear-gradient(to bottom, rgba(0,0,0,.6), rgba(0,0,0,0));
+    pointer-events:none;
+  }
   .hero picture, .hero img{width:100%;height:76vh;min-height:460px;object-fit:cover;}
   .hero-caption{
     background:var(--verde-escuro);color:var(--areia);
@@ -433,12 +438,4 @@
       entries.forEach(function(e){
         if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
       });
-    }, {threshold:0.12});
-    els.forEach(function(el){ io.observe(el); });
-  } else {
-    document.querySelectorAll('[data-reveal]').forEach(function(el){ el.classList.add('in'); });
-  }
-</script>
-
-</body>
-</html>
+    }, {threshol
