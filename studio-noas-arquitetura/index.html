@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>document.documentElement.classList.add('js');</script>
 <title>Studio Noas Arquitetura — Projetos de Arquitetura e Interiores em Caldas Novas, GO</title>
 <meta name="description" content="Escritório de arquitetura e design de interiores em Caldas Novas, GO. Projetos residenciais e comerciais atemporais, assinados por Andrea Nogueira e Carlos Assis.">
 
@@ -187,8 +188,9 @@
   }
   .wa-float svg{width:26px;height:26px;}
 
-  [data-reveal]{opacity:0;transform:translateY(18px);transition:opacity .6s ease, transform .6s ease;}
-  [data-reveal].in{opacity:1;transform:none;}
+  [data-reveal]{opacity:1;transform:none;}
+  .js [data-reveal]{opacity:0;transform:translateY(18px);transition:opacity .6s ease, transform .6s ease;}
+  .js [data-reveal].in{opacity:1;transform:none;}
   @media (prefers-reduced-motion: reduce){
     [data-reveal]{opacity:1;transform:none;transition:none;}
     html{scroll-behavior:auto;}
@@ -438,4 +440,6 @@
       entries.forEach(function(e){
         if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
       });
-    }, {threshol
+    }, {threshold:0.12});
+    els.forEach(function(el){ io.observe(el); });
+    setTimeout(function()
