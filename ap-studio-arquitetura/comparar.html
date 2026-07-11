@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AP Studio Arquitetura — Antes e Depois</title>
+<meta name="robots" content="noindex">
+<style>
+  :root{
+    --verde-eucalipto:#4B735B;
+    --ardosia:#2C444E;
+    --areia:#EDE7DD;
+    --osso:#F7F5F1;
+    --grafite:#262322;
+    --cobre:#B5652E;
+    --serif: Georgia, 'Iowan Old Style', 'Palatino Linotype', 'Book Antiqua', serif;
+    --sans: -apple-system, 'Segoe UI', 'Inter', system-ui, Arial, sans-serif;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0; font-family:var(--sans); background:var(--areia); color:var(--grafite);}
+  header{padding:28px 24px 16px; max-width:1200px; margin:0 auto;}
+  h1{font-family:var(--serif); font-weight:400; color:var(--ardosia); font-size:clamp(1.6rem,4vw,2.2rem); margin:0 0 8px;}
+  .aviso{
+    max-width:900px; background:var(--osso); border-left:4px solid var(--cobre);
+    padding:16px 20px; font-size:0.92rem; line-height:1.6; margin-top:14px; color:var(--grafite);
+  }
+  .aviso strong{color:var(--ardosia);}
+  .grid{
+    display:grid; grid-template-columns:1fr 1fr; gap:2px;
+    background:var(--ardosia);
+    margin-top:24px;
+  }
+  .col{background:var(--osso); display:flex; flex-direction:column; min-height:80vh;}
+  .col-head{
+    padding:14px 20px; background:var(--ardosia); color:var(--osso);
+    display:flex; justify-content:space-between; align-items:center; gap:12px; flex-wrap:wrap;
+  }
+  .col-head h2{font-family:var(--serif); font-weight:400; font-size:1.1rem; margin:0;}
+  .tag{font-size:0.72rem; letter-spacing:0.08em; text-transform:uppercase; opacity:0.85;}
+  .col iframe{flex:1; width:100%; border:0; min-height:78vh; background:#fff;}
+  .col-foot{padding:10px 20px; font-size:0.8rem; color:var(--grafite); opacity:0.75;}
+  @media (max-width:860px){
+    .grid{grid-template-columns:1fr;}
+    .col iframe{min-height:70vh;}
+  }
+  footer{padding:24px; text-align:center; font-size:0.82rem; opacity:0.7;}
+  a.voltar{color:var(--ardosia);}
+</style>
+</head>
+<body>
+<header>
+  <h1>AP Studio Arquitetura — antigo × novo</h1>
+  <div class="aviso">
+    <strong>Sobre esta comparação:</strong> o domínio oficial <code>apstudioarquitetura.com.br</code> está fora do ar (erro 503 persistente na hospedagem). O domínio espelho <code>apstudioarquitetura.com</code>, indicado como site oficial no Linktree do escritório, também está fora do ar e sem os arquivos de imagem originais recuperáveis. O painel da esquerda mostra o <strong>snapshot mais recente disponível no Wayback Machine, de 6 de março de 2023</strong> — portanto uma versão antiga, anterior à queda do site. Não foi possível recuperar as fotos dos projetos (os arquivos originais no CDN retornam erro 404 e não foram arquivados pelo Wayback Machine), por isso o redesign ao lado não inventa fotografias: mantém apenas texto, nomes de projeto, localização e dados de contato reais extraídos do site antigo.
+  </div>
+</header>
+
+<div class="grid">
+  <div class="col">
+    <div class="col-head">
+      <h2>Antigo</h2>
+      <span class="tag">Wayback Machine · 06/03/2023</span>
+    </div>
+    <iframe src="http://web.archive.org/web/20230306181634/https://www.apstudioarquitetura.com/" loading="lazy" title="Site antigo do AP Studio Arquitetura (snapshot de 2023)"></iframe>
+    <div class="col-foot">apstudioarquitetura.com — domínio espelho, também fora do ar hoje. Snapshot arquivado. Se o quadro acima não carregar, <a href="http://web.archive.org/web/20230306181634/https://www.apstudioarquitetura.com/" target="_blank" rel="noopener">abra o snapshot em nova aba ↗</a>.</div>
+  </div>
+  <div class="col">
+    <div class="col-head">
+      <h2>Novo</h2>
+      <span class="tag">Redesign 2026</span>
+    </div>
+    <iframe src="index.html" loading="lazy" title="Site novo do AP Studio Arquitetura"></iframe>
+    <div 

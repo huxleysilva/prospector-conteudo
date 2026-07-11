@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Studio Noas — Antes e Depois</title>
+<style>
+  :root{
+    --verde:#3C4A34;
+    --verde-escuro:#20261C;
+    --terracota:#B5623B;
+    --areia:#F4F1EA;
+    --pedra:#DAD3C3;
+    --tinta:#20221D;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+    background:var(--areia);
+    color:var(--tinta);
+  }
+  header{
+    background:var(--verde-escuro);color:var(--areia);
+    padding:22px 28px;
+  }
+  header h1{margin:0 0 6px;font-size:1.3rem;font-weight:600;}
+  header p{margin:0;color:#c9cbbd;font-size:.92rem;max-width:70ch;}
+  .grid{
+    display:grid;grid-template-columns:1fr;gap:2px;background:var(--pedra);
+  }
+  .pane{background:var(--areia);display:flex;flex-direction:column;min-height:70vh;}
+  .pane .label{
+    display:flex;align-items:center;justify-content:space-between;gap:12px;
+    padding:12px 18px;font-size:.82rem;letter-spacing:.08em;text-transform:uppercase;font-weight:700;
+  }
+  .pane.antes .label{background:#e7dfce;color:#6b5a3e;}
+  .pane.depois .label{background:var(--verde);color:var(--areia);}
+  .pane .label a{color:inherit;text-decoration:underline;font-size:.78rem;text-transform:none;letter-spacing:0;font-weight:400;}
+  iframe{width:100%;flex:1;min-height:70vh;border:none;display:block;background:#fff;}
+  .notas{padding:24px 28px 40px;max-width:900px;}
+  .notas h2{font-size:1.05rem;}
+  .notas ul{padding-left:20px;font-size:.92rem;line-height:1.6;}
+  @media (min-width:900px){
+    .grid{grid-template-columns:1fr 1fr;}
+    .pane{min-height:88vh;}
+    iframe{min-height:88vh;}
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1>Studio Noas Arquitetura — comparação antes / depois</h1>
+  <p>À esquerda, o site atual em produção. À direita, a proposta de redesign — mesma identidade, mesmas fotos e textos reais, estrutura e correções novas. Detalhes em NOTAS.md.</p>
+</header>
+<div class="grid">
+  <div class="pane antes">
+    <div class="label">
+      <span>Antes — no ar</span>
+      <a href="http://www.studionoas.com.br/" target="_blank" rel="noopener">abrir em nova aba ↗</a>
+    </div>
+    <iframe src="http://www.studionoas.com.br/" title="Site atual do Studio Noas" loading="lazy"></iframe>
+  </div>
+  <div class="pane depois">
+    <div class="label">
+      <span>Depois — proposta</span>
+      <a href="index.html" target="_blank" rel="noopener">abrir em nova aba ↗</a>
+    </div>
+    <iframe src="index.html" title="Proposta de redesign do Studio Noas" loading="lazy"></iframe>
+  </div>
+</div>
+<div class="notas">
+  <h2>O que mudou, em resumo</h2>
+  <ul>
+    <li>Botão de orçamento corrigido: o WhatsApp do site antigo tinha um dígito faltando (<code>556499866600</code>) e não abria conversa nenhuma. O número correto é <code>5564999866600</code>.</li>
+    <li>Telefone único em todo o site — o rodapé antigo mostrava (64) 99341-2358, diferente do número principal (64) 99986-6600.</li>
+    <li>Removido o contador "pessoas envolvidas" que ficou travado em 0.</li>
+    <li>Removida a página de teste "onepage1" (embed do Canva) que estava linkada no menu principal.</li>
+    <li>Site condensado de 5 páginas para uma página só, mantendo logo, fotos de projeto, nomes dos projetos e todos os textos institucionais reais.</li>
+  </ul>
+  <p>Notas completas em <code>NOTAS.md</code>, na mesma pasta.</p>
+</div>
+</body>
+</html>

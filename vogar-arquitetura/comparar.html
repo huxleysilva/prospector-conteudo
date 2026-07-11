@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vogar Arquitetura — antes e depois</title>
+<style>
+  :root{
+    --bg:#F4F0E7; --ink:#1B2420; --sage:#6E7B5E; --brass:#9C7A46; --line:#C9C2B2;
+    --serif:"Fraunces", Georgia, serif;
+    --sans:"Inter Tight", -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+  }
+  *{ box-sizing:border-box; }
+  body{ margin:0; background:var(--bg); color:var(--ink); font-family:var(--sans); }
+  header{
+    padding:20px clamp(16px,4vw,40px);
+    border-bottom:1px solid var(--line);
+    display:flex; align-items:center; justify-content:space-between;
+    flex-wrap:wrap; gap:12px;
+  }
+  header h1{
+    font-family:var(--serif); font-weight:500; font-size:1.3rem; margin:0;
+    letter-spacing:0.02em;
+  }
+  header p{ margin:4px 0 0; font-size:0.85rem; color:var(--sage); }
+  .legenda{ display:flex; gap:18px; font-size:0.8rem; letter-spacing:0.04em; text-transform:uppercase; }
+  .legenda span{ display:flex; align-items:center; gap:6px; }
+  .dot{ width:9px; height:9px; border-radius:50%; display:inline-block; }
+  .dot.antigo{ background:#B4432B; }
+  .dot.novo{ background:var(--brass); }
+
+  .grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:1px;
+    background:var(--line);
+    height:calc(100vh - 90px);
+  }
+  .painel{ background:var(--bg); display:flex; flex-direction:column; min-width:0; }
+  .painel-head{
+    padding:10px 16px;
+    font-size:0.78rem; letter-spacing:0.08em; text-transform:uppercase;
+    display:flex; align-items:center; justify-content:space-between;
+    border-bottom:1px solid var(--line);
+  }
+  .painel-head a{ color:var(--sage); text-decoration:none; font-size:0.75rem; }
+  .painel-head a:hover{ color:var(--brass); }
+  iframe{ flex:1; width:100%; border:0; background:#fff; }
+
+  @media (max-width:860px){
+    .grid{ grid-template-columns:1fr; height:auto; }
+    iframe{ height:78vh; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div>
+    <h1>Vogar Arquitetura — antes e depois</h1>
+    <p>Site antigo (Shopify, no ar) ao lado do redesign proposto.</p>
+  </div>
+  <div class="legenda">
+    <span><i class="dot antigo"></i> Antigo</span>
+    <span><i class="dot novo"></i> Novo</span>
+  </div>
+</header>
+
+<div class="grid">
+  <div class="painel">
+    <div class="painel-head">
+      <span>Antes — vogar.arq.br</span>
+      <a href="http://www.vogar.arq.br/" target="_blank" rel="noopener">abrir ↗</a>
+    </div>
+    <iframe src="http://www.vogar.arq.br/" title="Site antigo da Vogar Arquitetura" loading="lazy"></iframe>
+  </div>
+  <div class="painel">
+    <div class="painel-head">
+      <span>Depois — redesign</span>
+      <a href="index.html" target="_blank" rel="noopener">abrir ↗</a>
+    </div>
+    <iframe src="index.html" title="Redesign do site da Vogar Arquitetura" loading="lazy"></iframe>
+  </div>
+</div>
+
+</body>
+</html>

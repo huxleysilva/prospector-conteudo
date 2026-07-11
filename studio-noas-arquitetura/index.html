@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Studio Noas Arquitetura — Projetos de Arquitetura e Interiores em Caldas Novas, GO</title>
+<meta name="description" content="Escritório de arquitetura e design de interiores em Caldas Novas, GO. Projetos residenciais e comerciais atemporais, assinados por Andrea Nogueira e Carlos Assis.">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Studio Noas Arquitetura — Caldas Novas, GO">
+<meta property="og:description" content="Projetos de arquitetura e interiores atemporais, do primeiro traço à obra pronta. Conheça o portfólio do Studio Noas.">
+<meta property="og:image" content="https://studionoas.com.br/wp-content/uploads/2022/06/CASA-PORTUGAL-CALDAS-NOVAS-GO-3.jpg">
+<meta property="og:url" content="https://studionoas.com.br/">
+<meta property="og:locale" content="pt_BR">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%233C4A34'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='34' fill='%23F4F1EA' text-anchor='middle'%3EN%3C/text%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter+Tight:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --verde:#3C4A34;
+    --verde-escuro:#20261C;
+    --terracota:#B5623B;
+    --areia:#F4F1EA;
+    --pedra:#DAD3C3;
+    --tinta:#20221D;
+    --branco:#FFFFFF;
+    --serif:'Fraunces', Georgia, 'Iowan Old Style', serif;
+    --sans:'Inter Tight', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --maxw:1320px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    font-family:var(--sans);
+    color:var(--tinta);
+    background:var(--areia);
+    line-height:1.55;
+  }
+  img{max-width:100%;display:block;}
+  a{color:inherit;}
+  h1,h2,h3{font-family:var(--serif);font-weight:500;margin:0;line-height:1.08;}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px;}
+
+  a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
+    outline:3px solid var(--terracota);
+    outline-offset:3px;
+  }
+
+  /* header */
+  header.site{
+    position:absolute;top:0;left:0;right:0;z-index:20;
+    padding:22px 0;
+  }
+  header.site .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;}
+  header.site img.logo{height:36px;width:auto;filter:brightness(0) invert(1);}
+  .wa-pill{
+    display:inline-flex;align-items:center;gap:8px;
+    background:var(--branco);color:var(--verde-escuro);
+    padding:10px 18px;border-radius:999px;text-decoration:none;
+    font-size:.92rem;font-weight:600;letter-spacing:.02em;
+    box-shadow:0 1px 0 rgba(0,0,0,.08);
+  }
+
+  /* hero */
+  .hero{position:relative;}
+  .hero picture, .hero img{width:100%;height:76vh;min-height:460px;object-fit:cover;}
+  .hero-caption{
+    background:var(--verde-escuro);color:var(--areia);
+    padding:56px 0 60px;
+  }
+  .hero-caption .eyebrow{
+    font-size:.82rem;letter-spacing:.16em;text-transform:uppercase;
+    color:var(--terracota);font-weight:600;margin-bottom:14px;display:block;
+  }
+  .hero-caption h1{font-size:clamp(2.1rem,5vw,3.6rem);max-width:16ch;}
+  .hero-caption p{max-width:52ch;margin:18px 0 0;color:#D9D9CE;font-size:1.05rem;}
+
+  /* section rhythm */
+  section{padding:88px 0;}
+  section.tight{padding:64px 0;}
+  .section-head{max-width:640px;margin-bottom:56px;}
+  .section-head .eyebrow{
+    font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--terracota);font-weight:600;display:block;margin-bottom:12px;
+  }
+  .section-head h2{font-size:clamp(1.7rem,3.4vw,2.5rem);}
+
+  /* projects */
+  .projeto{
+    display:grid;grid-template-columns:1fr;
+    border-top:1px solid var(--pedra);
+    padding-top:40px;margin-top:40px;
+  }
+  .projeto:first-of-type{border-top:none;padding-top:0;margin-top:0;}
+  .projeto figure{margin:0;position:relative;}
+  .projeto img{width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;background:var(--pedra);}
+  .projeto-info{
+    display:flex;align-items:baseline;justify-content:space-between;gap:24px;
+    padding:20px 4px 0;flex-wrap:wrap;
+  }
+  .projeto-num{
+    font-family:var(--serif);font-size:1rem;color:var(--terracota);
+    letter-spacing:.06em;
+  }
+  .projeto-info h3{font-size:1.4rem;margin-top:4px;}
+  .projeto-meta{font-size:.92rem;color:#5b5d54;text-align:right;}
+
+  /* sobre */
+  .sobre{background:var(--branco);}
+  .sobre-grid{display:grid;grid-template-columns:1fr;gap:44px;align-items:center;}
+  .sobre-grid img{aspect-ratio:8/7;object-fit:cover;}
+  .sobre-texto p{margin:0 0 16px;color:#3a3c34;}
+  .sobre-texto .assinatura{
+    font-family:var(--serif);font-style:italic;color:var(--verde);
+    margin-top:22px;font-size:1.05rem;
+  }
+
+  /* servicos */
+  .servicos-grid{display:grid;grid-template-columns:1fr;gap:1px;background:var(--pedra);border:1px solid var(--pedra);}
+  .servico{background:var(--areia);padding:34px 30px;}
+  .servico .num{font-family:var(--serif);color:var(--terracota);font-size:.95rem;}
+  .servico h3{font-size:1.3rem;margin:12px 0 10px;}
+  .servico p{margin:0;color:#4a4c43;font-size:.96rem;}
+
+  /* prova */
+  .prova{background:var(--verde-escuro);color:var(--areia);}
+  .prova .section-head h2{color:var(--areia);}
+  .rating{
+    display:flex;align-items:center;gap:14px;margin-bottom:44px;flex-wrap:wrap;
+  }
+  .rating .num{font-family:var(--serif);font-size:2.6rem;color:var(--terracota);}
+  .rating .stars{letter-spacing:2px;color:var(--terracota);font-size:1.1rem;}
+  .rating .fonte{color:#B9BCAE;font-size:.88rem;}
+  .depoimentos{display:grid;grid-template-columns:1fr;gap:28px;}
+  .depoimento blockquote{margin:0;font-family:var(--serif);font-size:1.15rem;line-height:1.4;}
+  .depoimento cite{display:block;margin-top:14px;font-style:normal;font-size:.85rem;color:#B9BCAE;}
+
+  /* contato */
+  .contato{background:var(--areia);}
+  .contato-grid{display:grid;grid-template-columns:1fr;gap:48px;}
+  .contato-dados dl{margin:0;}
+  .contato-dados dt{font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:var(--terracota);margin-top:22px;}
+  .contato-dados dt:first-child{margin-top:0;}
+  .contato-dados dd{margin:6px 0 0;font-size:1.05rem;}
+  .contato-dados a.big-link{
+    font-family:var(--serif);font-size:1.6rem;text-decoration:none;color:var(--verde-escuro);
+  }
+  form.orcamento{display:grid;gap:14px;}
+  form.orcamento label{font-size:.82rem;letter-spacing:.05em;text-transform:uppercase;color:#5b5d54;}
+  form.orcamento input,form.orcamento textarea{
+    width:100%;padding:12px 14px;border:1px solid var(--pedra);background:var(--branco);
+    font-family:var(--sans);font-size:.98rem;border-radius:2px;
+  }
+  form.orcamento textarea{min-height:110px;resize:vertical;}
+  form.orcamento button{
+    justify-self:start;padding:14px 30px;background:var(--verde);color:var(--areia);
+    border:none;border-radius:999px;font-weight:600;font-size:.95rem;cursor:pointer;
+    letter-spacing:.02em;
+  }
+  form.orcamento button:hover{background:var(--verde-escuro);}
+
+  /* footer */
+  footer{background:var(--verde-escuro);color:#B9BCAE;padding:36px 0;font-size:.85rem;}
+  footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center;}
+  footer a{color:#DAD3C3;text-decoration:none;}
+  footer a:hover{text-decoration:underline;}
+
+  /* floating whatsapp - mobile reach */
+  .wa-float{
+    position:fixed;right:18px;bottom:18px;z-index:30;
+    background:var(--verde);color:var(--areia);
+    width:56px;height:56px;border-radius:50%;
+    display:flex;align-items:center;justify-content:center;
+    text-decoration:none;box-shadow:0 6px 18px rgba(0,0,0,.28);
+  }
+  .wa-float svg{width:26px;height:26px;}
+
+  [data-reveal]{opacity:0;transform:translateY(18px);transition:opacity .6s ease, transform .6s ease;}
+  [data-reveal].in{opacity:1;transform:none;}
+  @media (prefers-reduced-motion: reduce){
+    [data-reveal]{opacity:1;transform:none;transition:none;}
+    html{scroll-behavior:auto;}
+  }
+
+  @media (min-width:760px){
+    .sobre-grid{grid-template-columns:0.85fr 1.15fr;}
+    .servicos-grid{grid-template-columns:repeat(3,1fr);}
+    .depoimentos{grid-template-columns:repeat(3,1fr);}
+    .contato-grid{grid-template-columns:1fr 1fr;}
+  }
+  @media (min-width:960px){
+    .projeto{grid-template-columns:1.55fr .85fr;gap:40px;align-items:end;}
+    .projeto-info{flex-direction:column;align-items:flex-start;padding-top:0;}
+    .projeto-meta{text-align:left;}
+  }
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <img class="logo" src="https://studionoas.com.br/wp-content/uploads/2024/04/NOAS_MARCA-01_VERDE-horizontal.png" alt="Studio Noas Arquitetura" width="240" height="98">
+    <a class="wa-pill" href="https://wa.me/5564999866600?text=Ol%C3%A1%2C%20vi%20o%20site%20do%20Studio%20Noas%20e%20quero%20um%20or%C3%A7amento" target="_blank" rel="noopener">Falar no WhatsApp</a>
+  </div>
+</header>
+
+<section class="hero">
+  <img src="https://studionoas.com.br/wp-content/uploads/2022/06/CASA-PORTUGAL-CALDAS-NOVAS-GO-3.jpg"
+       alt="Área externa com piscina e cascata da Casa Portugal, projeto do Studio Noas em Caldas Novas"
+       width="1600" height="900" fetchpriority="high">
+  <div class="hero-caption">
+    <div class="wrap">
+      <span class="eyebrow">Arquitetura &amp; Interiores — Caldas Novas, GO</span>
+      <h1>Projetos atemporais, pensados do primeiro traço à obra pronta.</h1>
+      <p>Studio Noas é o escritório de Andrea Nogueira e Carlos Assis: arquitetura residencial e comercial com linguagem minimalista, purista e funcional, dispensando modismos.</p>
+    </div>
+  </div>
+</section>
+
+<section id="projetos">
+  <div class="wrap">
+    <div class="section-head" data-reveal>
+      <span class="eyebrow">Portfólio</span>
+      <h2>Projetos desenvolvidos</h2>
+    </div>
+
+    <div class="projeto" data-reveal>
+      <figure>
+        <img src="https://studionoas.com.br/wp-content/uploads/2022/06/ALDEIA-DAS-THERMAS-CALDAS-NOVAS-GO.jpg" loading="lazy" width="1600" height="900"
+             alt="Fachada da residência no condomínio Aldeia das Thermas, Caldas Novas">
+      </figure>
+      <div class="projeto-info">
+        <div>
+          <span class="projeto-num">01</span>
+          <h3>Aldeia das Thermas</h3>
+        </div>
+        <div class="projeto-meta">Residencial<br>Caldas Novas — GO</div>
+      </div>
+    </div>
+
+    <div class="projeto" data-reveal>
+      <figure>
+        <img src="https://studionoas.com.br/wp-content/uploads/2022/06/CASA-L2-CALDAS-NOVAS-01.jpg" loading="lazy" width="1600" height="900"
+             alt="Casa L2, projeto residencial em Caldas Novas">
+      </figure>
+      <div class="projeto-info">
+        <div>
+          <span class="projeto-num">02</span>
+          <h3>Casa L2</h3>
+        </div>
+        <div class="projeto-meta">Residencial<br>Caldas Novas — GO</div>
+      </div>
+    </div>
+
+    <div class="projeto" data-reveal>
+      <figure>
+        <img src="https://studionoas.com.br/wp-content/uploads/2022/06/RESIDENCIA-AR-CALDAS-NOVAS-GO-4.jpg" loading="lazy" width="1600" height="900"
+             alt="Residência A+R, projeto residencial em Caldas Novas">
+      </figure>
+      <div class="projeto-info">
+        <div>
+          <span class="projeto-num">03</span>
+          <h3>Residência A+R</h3>
+        </div>
+        <div class="projeto-meta">Residencial<br>Caldas Novas — GO</div>
+      </div>
+    </div>
+
+    <div class="projeto" data-reveal>
+      <figure>
+        <img src="https://studionoas.com.br/wp-content/uploads/2022/06/ARENA-BEACH-TENNIS-APARECIDA-DE-GOIANIA-resize.jpg" loading="lazy" width="1600" height="900"
+             alt="Arena Beach Tennis, projeto comercial em Aparecida de Goiânia">
+      </figure>
+      <div class="projeto-info">
+        <div>
+          <span class="projeto-num">04</span>
+          <h3>Arena Beach Tennis</h3>
+        </div>
+        <div class="projeto-meta">Comercial<br>Aparecida de Goiânia — GO</div>
+      </div>
+    </div>
+
+    <div class="projeto" data-reveal>
+      <figure>
+        <img src="https://studionoas.com.br/wp-content/uploads/2022/06/PET-CENTER-CALDAS-NOVAS-02.jpg" loading="lazy" width="1600" height="900"
+             alt="Pet Center, projeto comercial em Caldas Novas">
+      </figure>
+      <div class="projeto-info">
+        <div>
+          <span class="projeto-num">05</span>
+          <h3>Pet Center</h3>
+        </div>
+        <div class="projeto-meta">Comercial<br>Caldas Novas — GO</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="sobre" id="sobre">
+  <div class="wrap">
+    <div class="sobre-grid">
+      <img data-reveal src="https://studionoas.com.br/wp-content/uploads/2022/06/002-1.jpg" loading="lazy" width="1200" height="1051"
+           alt="Andrea Nogueira e Carlos Assis, fundadores do Studio Noas Arquitetura">
+      <div class="sobre-texto" data-reveal>
+        <span class="eyebrow" style="color:var(--terracota);font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;font-weight:600;">Como nasceu o Studio Noas</span>
+        <h2 style="font-size:1.9rem;margin:12px 0 20px;">Andrea Nogueira &amp; Carlos Assis</h2>
+        <p>Carlos formou-se em Arquitetura e Urbanismo pela UEG em 2015, depois de um intercâmbio em construções sustentáveis na Universidade de Torino, na Itália, e de estagiar como coordenador de obras em Anápolis. Andrea é designer de interiores desde 2018, com interesse particular por cor e por arquitetura contemporânea.</p>
+        <p>O nome NOAS é o monograma das iniciais do casal — NO de Nogueira, AS de Assis. Juntos, atendem clientes remotamente em Caldas Novas e em qualquer cidade, com tour virtual e realidade aumentada para aproximar o cliente do projeto antes da obra começar.</p>
+        <p class="assinatura">“Definir um objetivo é o primeiro passo para tornar o invisível em visível.”</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="servicos">
+  <div class="wrap">
+    <div class="section-head" data-reveal>
+      <span class="eyebrow">O que fazemos</span>
+      <h2>Serviços</h2>
+    </div>
+    <div class="servicos-grid" data-reveal>
+      <div class="servico">
+        <span class="num">01</span>
+        <h3>Arquitetura</h3>
+        <p>Planejamento completo dos ambientes, fachadas e área de lazer, com imagens 3D e toda a aprovação burocrática incluída.</p>
+      </div>
+      <div class="servico">
+        <span class="num">02</span>
+        <h3>Interiores</h3>
+        <p>Acabamentos, marcenaria, marmoraria e projeto luminotécnico definidos em detalhe, para a obra não ter retrabalho.</p>
+      </div>
+      <div class="servico">
+        <span class="num">03</span>
+        <h3>Obras</h3>
+        <p>Acompanhamento próximo da construção completa, do primeiro traço até a chave na mão.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="prova" id="depoimentos">
+  <div class="wrap">
+    <div class="section-head" data-reveal>
+      <span class="eyebrow">O que dizem os clientes</span>
+      <h2>Depoimentos</h2>
+    </div>
+    <div class="rating" data-reveal>
+      <span class="num">5,0</span>
+      <div>
+        <div class="stars">★★★★★</div>
+        <div class="fonte">22 avaliações no Google</div>
+      </div>
+    </div>
+    <div class="depoimentos" data-reveal>
+      <div class="depoimento">
+        <blockquote>“Projeto sensacional, moderno e extremamente funcional. Recomendo.”</blockquote>
+        <cite>Alex Sandro Alves da Silva, Google</cite>
+      </div>
+      <div class="depoimento">
+        <blockquote>“Grandes profissionais que se tornaram amigos — trabalho todo pensado e planejado.”</blockquote>
+        <cite>Marcos Soares, Google</cite>
+      </div>
+      <div class="depoimento">
+        <blockquote>“Atendimento personalizado mesmo morando em outra cidade. Ficou perfeito.”</blockquote>
+        <cite>Rosely Nogueira de Souza Oliveira, Google</cite>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contato" id="contato">
+  <div class="wrap">
+    <div class="section-head" data-reveal>
+      <span class="eyebrow">Fale com a gente</span>
+      <h2>Seu projeto começa aqui</h2>
+    </div>
+    <div class="contato-grid" data-reveal>
+      <div class="contato-dados">
+        <dl>
+          <dt>WhatsApp</dt>
+          <dd><a class="big-link" href="https://wa.me/5564999866600?text=Ol%C3%A1%2C%20quero%20um%20or%C3%A7amento" target="_blank" rel="noopener">(64) 99986-6600</a></dd>
+          <dt>E-mail</dt>
+          <dd><a href="mailto:contato@studionoas.com.br">contato@studionoas.com.br</a></dd>
+          <dt>Endereço</dt>
+          <dd>Av. Bento de Godoy Neto, Qd 66 — Lt 07, Santa Efigênia<br>Caldas Novas — GO, 75689-210</dd>
+          <dt>Redes</dt>
+          <dd><a href="https://www.instagram.com/studio.noas/" target="_blank" rel="noopener">Instagram</a> &nbsp;·&nbsp; <a href="https://www.facebook.com/studio.noas/" target="_blank" rel="noopener">Facebook</a></dd>
+        </dl>
+      </div>
+      <form class="orcamento" action="mailto:contato@studionoas.com.br" method="post" enctype="text/plain">
+        <div>
+          <label for="nome">Nome</label>
+          <input id="nome" name="nome" type="text" required>
+        </div>
+        <div>
+          <label for="tel">Telefone</label>
+          <input id="tel" name="telefone" type="tel" placeholder="(64) 9 9999-9999" required>
+        </div>
+        <div>
+          <label for="msg">Sobre o projeto</label>
+          <textarea id="msg" name="mensagem" required></textarea>
+        </div>
+        <button type="submit">Enviar</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>© <span id="ano"></span> Studio Noas Arquitetura — Caldas Novas, GO</span>
+    <a href="https://wa.me/5564999866600" target="_blank" rel="noopener">(64) 99986-6600</a>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/5564999866600?text=Ol%C3%A1%2C%20quero%20um%20or%C3%A7amento" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+  <svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M16.02 3C9.4 3 4 8.36 4 15c0 2.36.68 4.55 1.86 6.4L4 29l7.78-1.83A11.9 11.9 0 0 0 16.02 27C22.64 27 28 21.64 28 15S22.64 3 16.02 3Zm0 21.7c-2 0-3.86-.55-5.46-1.5l-.39-.23-4.62 1.09 1.11-4.5-.25-.4A9.62 9.62 0 0 1 6.3 15c0-5.36 4.36-9.7 9.72-9.7 5.36 0 9.7 4.34 9.7 9.7s-4.34 9.7-9.7 9.7Zm5.32-7.27c-.29-.15-1.72-.85-1.99-.95-.27-.1-.46-.15-.66.15-.19.29-.75.95-.92 1.14-.17.19-.34.22-.63.07-.29-.15-1.22-.45-2.32-1.43-.86-.76-1.44-1.71-1.61-2-.17-.29-.02-.45.13-.6.13-.13.29-.34.44-.51.15-.17.19-.29.29-.48.1-.19.05-.36-.02-.51-.07-.15-.66-1.59-.9-2.17-.24-.57-.48-.5-.66-.5-.17 0-.36-.02-.56-.02-.19 0-.51.07-.78.36-.27.29-1.02 1-1.02 2.44 0 1.44 1.05 2.83 1.2 3.02.15.19 2.06 3.14 4.99 4.4.7.3 1.24.48 1.67.61.7.22 1.34.19 1.84.11.56-.08 1.72-.7 1.96-1.38.24-.68.24-1.26.17-1.38-.07-.12-.26-.19-.55-.34Z"/></svg>
+</a>
+
+<script>
+  document.getElementById('ano').textContent = new Date().getFullYear();
+  if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches && 'IntersectionObserver' in window) {
+    var els = document.querySelectorAll('[data-reveal]');
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+      });
+    }, {threshold:0.12});
+    els.forEach(function(el){ io.observe(el); });
+  } else {
+    document.querySelectorAll('[data-reveal]').forEach(function(el){ el.classList.add('in'); });
+  }
+</script>
+
+</body>
+</html>
