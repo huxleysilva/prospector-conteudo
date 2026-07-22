@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Antes e depois — Odontoclin Especialidades</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230F4C42'/%3E%3Cpath d='M6 12a10 10 0 0 0 20 0' fill='none' stroke='%23F6F2EA' stroke-width='2.5' stroke-linecap='round'/%3E%3Cpath d='M9 12a7 7 0 0 0 14 0' fill='none' stroke='%23C06A55' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter+Tight:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --tinta:#172B27;
+  --pinho:#0F4C42;
+  --pinho-escuro:#0A342E;
+  --marfim:#F6F2EA;
+  --esmalte:#FFFFFF;
+  --gengiva:#C06A55;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  font-family:"Inter Tight", system-ui, sans-serif;
+  background:var(--marfim);color:var(--tinta);
+  min-height:100vh;display:flex;flex-direction:column;
+}
+:focus-visible{outline:3px solid var(--gengiva);outline-offset:3px;border-radius:2px}
+header{
+  padding:22px 20px 18px;text-align:center;
+  border-bottom:1px solid #E5DFD2;background:var(--esmalte);
+}
+header h1{
+  font-family:"Fraunces", Georgia, serif;font-weight:600;
+  font-size:clamp(1.25rem,3vw,1.7rem);letter-spacing:-.01em;
+}
+header p{margin-top:4px;font-size:.9rem;color:#3D514C}
+.paineis{
+  flex:1;display:grid;gap:16px;padding:16px;
+  grid-template-rows:1fr 1fr;
+}
+@media(min-width:960px){
+  .paineis{grid-template-columns:1fr 1fr;grid-template-rows:1fr;gap:20px;padding:20px}
+}
+.painel{
+  display:flex;flex-direction:column;min-height:420px;
+  background:var(--esmalte);border:1px solid #E5DFD2;border-radius:12px;
+  overflow:hidden;
+}
+.painel-topo{
+  display:flex;align-items:center;justify-content:space-between;gap:10px;
+  padding:10px 16px;border-bottom:1px solid #E5DFD2;
+}
+.painel-topo .tag{
+  font-size:.72rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;
+}
+.painel-antes .tag{color:#8A6A4A}
+.painel-depois .tag{color:var(--pinho)}
+.painel-topo a{
+  font-size:.82rem;font-weight:600;color:var(--pinho);text-decoration:none;
+  white-space:nowrap;
+}
+.painel-topo a:hover{text-decoration:underline}
+iframe{flex:1;width:100%;border:0;background:#fff}
+footer{
+  padding:14px 20px;text-align:center;font-size:.8rem;color:#3D514C;
+  border-top:1px solid #E5DFD2;
+}
+</style>
+</head>
+<body>
+<header>
+  <h1>Odontoclin Especialidades — antes e depois</h1>
+  <p>À esquerda, a página atual no Google Sites. À direita, a proposta de site novo.</p>
+</header>
+
+<div class="paineis">
+  <section class="painel painel-antes" aria-label="Site atual">
+    <div class="painel-topo">
+      <span class="tag">Antes · Google Sites</span>
+      <a href="https://sites.google.com/view/whatsappaqui/odontoclin" target="_blank" rel="noopener">abrir em nova aba ↗</a>
+    </div>
+    <iframe src="https://sites.google.com/view/whatsappaqui/odontoclin" title="Site atual da Odontoclin no Google Sites" loading="lazy"></iframe>
+  </section>
+
+  <section class="painel painel-depois" aria-label="Proposta de site novo">
+    <div class="painel-topo">
+      <span class="tag">Depois · Proposta</span>
+      <a href="index.html" target="_blank" rel="noopener">abrir em nova aba ↗</a>
+    </div>
+    <iframe src="index.html" title="Proposta de site novo para a Odontoclin" loading="lazy"></iframe>
+  </section>
+</div>
+
+<footer>Se algum painel não carregar aqui dentro, use o link “abrir em nova aba ↗” no topo do painel.</footer>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Oral Clínica — antes e depois</title>
+<meta name="description" content="Comparação lado a lado: o link atual da Oral Clínica e a proposta de site novo.">
+<style>
+  :root{
+    --papel:#FAF7F2;
+    --pinho:#0F3B33;
+    --menta:#E2EEE7;
+    --salvia:#5E8677;
+    --ambar:#C0892F;
+    --tinta:#22302B;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{
+    font-family:system-ui,-apple-system,"Segoe UI",sans-serif;
+    background:var(--papel);
+    color:var(--tinta);
+    min-height:100vh;
+    display:flex;flex-direction:column;
+  }
+  :focus-visible{outline:3px solid var(--ambar);outline-offset:3px}
+
+  header{
+    background:var(--pinho);color:var(--papel);
+    padding:1.1rem clamp(1rem,3vw,2rem);
+  }
+  header h1{
+    font-family:Georgia,"Times New Roman",serif;
+    font-weight:500;font-size:1.3rem;
+  }
+  header p{font-size:.85rem;color:#9DBBAF;margin-top:.2rem}
+
+  .paineis{
+    flex:1;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:1rem;
+    padding:1rem clamp(1rem,3vw,2rem) 1.5rem;
+    min-height:0;
+  }
+  .painel{
+    display:flex;flex-direction:column;
+    background:#fff;
+    border:1px solid var(--menta);
+    border-radius:8px;
+    overflow:hidden;
+    min-height:70vh;
+  }
+  .rotulo{
+    display:flex;align-items:center;justify-content:space-between;
+    gap:1rem;
+    padding:.7rem 1rem;
+    font-size:.85rem;
+    border-bottom:1px solid var(--menta);
+  }
+  .rotulo strong{font-size:.95rem}
+  .rotulo .tag{
+    font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;
+    padding:.2rem .6rem;border-radius:99px;
+  }
+  .antes .tag{background:#F3E3E0;color:#8A3B2E}
+  .depois .tag{background:var(--menta);color:var(--pinho)}
+  .rotulo a{
+    color:var(--pinho);font-weight:600;text-decoration:none;
+    border-bottom:1.5px solid var(--ambar);
+    white-space:nowrap;
+  }
+  .rotulo a:hover{color:var(--ambar)}
+  iframe{
+    flex:1;width:100%;border:0;min-height:0;
+    background:#fff;
+  }
+  .aviso{
+    padding:.6rem 1rem;
+    font-size:.78rem;color:var(--salvia);
+    border-top:1px solid var(--menta);
+  }
+  @media (max-width:900px){
+    .paineis{grid-template-columns:1fr}
+    .painel{min-height:80vh}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Oral Clínica — antes e depois</h1>
+  <p>À esquerda, o link atual (tela de login do sistema de agenda). À direita, a proposta de site novo.</p>
+</header>
+
+<div class="paineis">
+  <section class="painel antes" aria-label="Site atual">
+    <div class="rotulo">
+      <span><span class="tag">Antes</span> &nbsp;<strong>agenda.link/oralclinicaluziania</strong></span>
+      <a href="https://agenda.link/oralclinicaluziania" target="_blank" rel="noopener">abrir em nova aba ↗</a>
+    </div>
+    <iframe src="https://agenda.link/oralclinicaluziania" title="Site atual da Oral Clínica" loading="lazy"></iframe>
+    <p class="aviso">Se este quadro aparecer em branco, o site atual bloqueia visualização embutida — use o link "abrir em nova aba".</p>
+  </section>
+
+  <section class="painel depois" aria-label="Proposta de site novo">
+    <div class="rotulo">
+      <span><span class="tag">Depois</span> &nbsp;<strong>Proposta de site novo</strong></span>
+      <a href="index.html" target="_blank" rel="noopener">abrir em nova aba ↗</a>
+    </div>
+    <iframe src="index.html" title="Proposta de site novo da Oral Clínica" loading="lazy"></iframe>
+  </section>
+</div>
+
+</body>
+</html>
