@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ION — Instituto Odontológico Neves | site atual e proposta, lado a lado</title>
+<meta name="description" content="Comparação lado a lado entre o site atual do Instituto Odontológico Neves e a proposta de redesign.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#5C2B50">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700&family=Spectral:wght@400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --tinta:#2B1A28;
+    --ameixa:#5C2B50;
+    --argila:#A8442A;
+    --osso:#FAF5F0;
+    --bruma:#F0E6EC;
+    --fumo:#6B5462;
+    --fio:#DCCBD6;
+    --display:"Bricolage Grotesque","Helvetica Neue",Arial,sans-serif;
+    --corpo:"Spectral",Georgia,serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{
+    font-family:var(--corpo);background:var(--osso);color:var(--tinta);
+    display:flex;flex-direction:column;min-height:100vh;line-height:1.6;
+  }
+  :focus-visible{outline:3px solid var(--argila);outline-offset:3px}
+
+  header{
+    padding:18px 28px;border-bottom:1px solid var(--fio);
+    display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 20px;
+  }
+  header .sigla{
+    font-family:var(--display);font-weight:700;font-size:1.35rem;
+    letter-spacing:-.045em;color:var(--ameixa);line-height:1;
+  }
+  header h1{font-family:var(--display);font-weight:600;font-size:1.02rem;letter-spacing:-.015em}
+  header p{font-size:.92rem;color:var(--fumo)}
+
+  .paineis{flex:1;display:grid;grid-template-columns:1fr 1fr;min-height:0}
+  .painel{display:flex;flex-direction:column;min-height:74vh;border-right:1px solid var(--fio)}
+  .painel:last-child{border-right:0}
+  .painel-topo{
+    display:flex;align-items:center;justify-content:space-between;
+    gap:12px;padding:10px 16px;
+  }
+  .tag{
+    font-family:var(--display);font-weight:600;font-size:.7rem;
+    letter-spacing:.145em;text-transform:uppercase;
+    padding:5px 11px;
+    clip-path:polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 0 100%);
+  }
+  .antigo .tag{background:#E6DED6;color:#5C4A38}
+  .novo .tag{background:var(--ameixa);color:var(--osso)}
+  .painel-topo a{
+    font-family:var(--display);font-weight:600;font-size:.9rem;
+    color:var(--argila);text-decoration:none;white-space:nowrap;
+  }
+  .painel-topo a:hover{text-decoration:underline;color:#8A3520}
+  iframe{flex:1;width:100%;border:0;border-top:1px solid var(--fio);background:#fff}
+
+  .pe{
+    border-top:1px solid var(--fio);background:var(--bruma);
+    padding:16px 28px;font-size:.92rem;color:var(--fumo);
+  }
+  .pe ul{list-style:none;display:flex;flex-wrap:wrap;gap:8px 26px}
+  .pe li{padding-left:18px;position:relative;line-height:1.5}
+  .pe li::before{
+    content:"";position:absolute;left:0;top:.58em;width:9px;height:9px;
+    background:var(--argila);
+    clip-path:polygon(0 0, 60% 0, 100% 40%, 100% 100%, 0 100%);
+  }
+
+  @media (max-width:900px){
+    .paineis{grid-template-columns:1fr}
+    .painel{border-right:0;border-bottom:1px solid var(--fio);min-height:86vh}
+    .painel:last-child{border-bottom:0}
+    header{padding:16px 20px}
+    .pe{padding:16px 20px}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <span class="sigla">ION</span>
+  <h1>Instituto Odontológico Neves — site atual e proposta</h1>
+  <p>Mesmos tratamentos, mesmo endereço, mesmas avaliações. Só a apresentação muda.</p>
+</header>
+
+<div class="paineis">
+  <section class="painel antigo" aria-label="Site atual">
+    <div class="painel-topo">
+      <span class="tag">Site atual</span>
+      <a href="https://institutoodontologiconeves.meudoutor.com/" target="_blank" rel="noopener">abrir em nova aba ↗</a>
+    </div>
+    <iframe src="https://institutoodontologiconeves.meudoutor.com/" title="Site atual do Instituto Odontológico Neves" loading="lazy"></iframe>
+  </section>
+
+  <section class="painel novo" aria-label="Proposta de redesign">
+    <div class="painel-topo">
+      <span class="tag">Proposta nova</span>
+      <a href="index.html" target="_blank" rel="noopener">abrir em nova aba ↗</a>
+    </div>
+    <iframe src="index.html" title="Proposta de redesign para o Instituto Odontológico Neves"></iframe>
+  </section>
+</div>
+
+<div class="pe">
+  <ul>
+    <li>Link no WhatsApp passa a chegar com nome, endereço e imagem (Open Graph).</li>
+    <li>Botão abre a conversa direto — sem formulário antes do contato.</li>
+    <li>O endereço no shopping vira argumento de venda, não rodapé.</li>
+    <li>Dra. Jéssica Neves aparece com nome, como nas avaliações.</li>
+    <li>Sem banner de cookies de terceiro.</li>
+  </ul>
+</div>
+
+</body>
+</html>
